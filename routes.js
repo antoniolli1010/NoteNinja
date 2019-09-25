@@ -7,7 +7,7 @@ const noteController = require('./controllers/noteController')
 
 //routes.get('/categories', categoryController.index)
 //routes.get('/categories/:id', categoryController.show)
-routes.post('/categories/:id/notes', categoryController.store)
+//routes.post('/categories/:id/notes', categoryController.store)
 //routes.put('/categories/:id', categoryController.update)
 //routes.delete('/categories/:id', categoryController.destroy)
 
