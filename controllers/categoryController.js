@@ -1,4 +1,7 @@
-const Category = require('../models/category')
+/************************************************
+ * lógica para rotas das categorias
+ *
+ const Category = require('../models/category')
 //const Note = require('../models/note')
 
 module.exports = {
@@ -26,3 +29,4 @@ module.exports = {
         return res.send("Categoria deletada");
     }
 }
+*/
