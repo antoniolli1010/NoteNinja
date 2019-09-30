@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+const Category = require('./category')
 const NoteSchema = mongoose.Schema({
     title: {
         type: String,
@@ -10,10 +10,8 @@ const NoteSchema = mongoose.Schema({
         required: true,
     },
     category: {
-        //type: mongoose.Schema.Types.ObjectId,
-        //ref: 'category',
-        type: String,
-        required: true,
+        type: mongoose.Schema.Types.ObjectId, String, 
+        ref: 'Category'
     },
     status_active: {
         type: Boolean,
@@ -25,4 +23,4 @@ const NoteSchema = mongoose.Schema({
 })
 
 
-module.exports = mongoose.model('Note', NoteSchema)
+module.exports = note = mongoose.model('Note', NoteSchema)
