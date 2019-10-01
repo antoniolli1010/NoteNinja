@@ -9,8 +9,8 @@ const NoteSchema = mongoose.Schema({
         required: true,
     },
     category: {
-        type: mongoose.Schema.Types.ObjectId, String, 
-        ref: 'Category'
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category',
     },
     status_active: {
         type: Boolean,
