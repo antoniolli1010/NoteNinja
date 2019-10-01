@@ -19,7 +19,7 @@ module.exports = {
     },
     async destroy(req, res) {
         await Category.findByIdAndRemove(req.params.id);
-        return res.send("Categoria deletada");
+        return res.send("Category deleted successfully");
     }
 }
  

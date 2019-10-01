@@ -9,8 +9,9 @@ const NoteSchema = mongoose.Schema({
         required: true,
     },
     category: {
-        type: mongoose.Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.String,
         ref: 'Category',
+        required: true,
     },
     status_active: {
         type: Boolean,
@@ -22,4 +23,4 @@ const NoteSchema = mongoose.Schema({
 })
 
 
-module.exports = note = mongoose.model('Note', NoteSchema)
+module.exports = mongoose.model('Note', NoteSchema)
