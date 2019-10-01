@@ -1,8 +1,4 @@
-/************************************************
- * lógica para rotas das categorias
- *
- const Category = require('../models/category')
-//const Note = require('../models/note')
+const Category = require('../models/category')
 
 module.exports = {
     async index(req, res) {
@@ -10,14 +6,11 @@ module.exports = {
         return res.json(category)
     },
     async show(req,res) {
-        const category = await Category.findById(re.body)
+        const category = await Category.findById(req.params.id)
         return res.json(category)
     },
     async store(req, res) {
-        //console.log(req.params.id)
-        //return res.json({ ok: true })
-        
-        const category = await Category.create(req.params.id)
+        const category = await Category.create(req.body)
         return res.json(category)
     },
     async update(req, res) {
@@ -29,4 +22,4 @@ module.exports = {
         return res.send("Categoria deletada");
     }
 }
-*/
+ 

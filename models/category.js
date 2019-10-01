@@ -1,12 +1,13 @@
-/* Code that didn't work while trying to make categories interact with the notes.
-
 const mongoose = require('mongoose')
 
 const categorySchema = mongoose.Schema({
-    title: {
+    name: {
         type: String,
         required: true,
-    }
-})
+    },
+    
+    },    {
+    timestamps: true,
+}) 
 
-module.exports = mongoose.model('Category', categorySchema)*/
+module.exports = category = mongoose.model('Category', categorySchema)
