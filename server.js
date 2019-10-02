@@ -18,11 +18,6 @@ mongoose.connect('mongodb://192.168.99.100:27017/noteninja-db', { useNewUrlParse
     console.log("Mongo error "+ err);
 });
 
-// Middlewares
-server.use(function(err, req, res, next){
-    res.send({ error: err.message })
-})
-
 
 server.use(routes)
 server.listen(PORT)

@@ -10,10 +10,9 @@ module.exports = {
         const note = await Note.findById(req.params.id)
         return res.json(note)
     },
-    async store(req, res, next) {
+    async store(req, res) {
         let category = req.body.category
-        category = await Category.findById(category)
-        .catch(err => { return res.status(400).json({ message: "Category does not exist"})}) 
+        category = await Category.findById(category) 
         let note = await Note.create(req.body)
         note.category = category.name
         return res.json(note)
@@ -23,7 +22,7 @@ module.exports = {
         return res.json(note)
     },
     async destroy(req, res) {
-        await Note.findByIdAndRemove(req.params.id)
+         await Note.findByIdAndRemove(req.params.id)
         return res.send("Note deleted successfully")
     }
 }
