@@ -14,12 +14,13 @@ module.exports = {
         return res.json(category)
     },
     async update(req, res) {
-        const category = await Category.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        const category = await Category
+        .findByIdAndUpdate(req.params.id, req.body, { new: true })
         return res.json(category)
     },
     async destroy(req, res) {
-        await Category.findByIdAndRemove(req.params.id);
-        return res.send("Category deleted successfully");
+        await Category.findByIdAndRemove(req.params.id)
+        return res.send("Category deleted successfully")
     }
 }
  
